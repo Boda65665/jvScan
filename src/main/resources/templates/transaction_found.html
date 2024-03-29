@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Transaction</title>
+</head>
+<body>
+<h3 th:text="'Transaction: '+${transaction.getHash()}"></h3>
+<p th:text="'from: '+${transaction.getFrom()}"></p>
+<p th:text="'to : '+${transaction.getTo()}"></p>
+<p th:text="'value: '+${transaction.getValue()}"></p>
+<p th:text="'data: '+${transaction.getData()}"></p>
+<a th:href="'/block/'+${transaction.getBlockNumber()}">block</a>
+</body>
+</html>
